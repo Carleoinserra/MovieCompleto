@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Movie Details</title>
+</head>
+<body>
+    <h1>Movie Details</h1>
+    <h2 th:text="'Title: ' + ${title}"></h2>
+    <p th:text="'Director: ' + ${director}"></p>
+    <p th:text="'Actors: ' + ${actors}"></p>
+    <img th:src="${poster}" alt="Movie Poster"/>
+    <br>
+    <a href="/">Search another movie</a>
+    <br>
+    <br>
+    <form action = "/add" method = "post">
+    <input type = "hidden" th:value = "${title}"   name = "tit">
+    <input type="submit" value = "aggiungi film">
+    </form>
+    
+</body>
+</html>
